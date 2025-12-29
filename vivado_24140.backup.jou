@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Aug 26 11:16:03 2025
+# Process ID         : 24140
+# Current directory  : C:/Users/joshe/Documents/XMSS_FIPS_205_UART
+# Command line       : vivado.exe -mode tcl -source tcl\build.tcl
+# Log file           : C:/Users/joshe/Documents/XMSS_FIPS_205_UART/vivado.log
+# Journal file       : C:/Users/joshe/Documents/XMSS_FIPS_205_UART\vivado.jou
+# Running On         : JoshLaptop
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 185H
+# CPU Frequency      : 3072 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 22
+# Host memory        : 33945 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36093 MB
+# Available Virtual  : 15780 MB
+#-----------------------------------------------------------
+source {tcl\build.tcl}
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+source tb_accelerator_ethernet_axi_wrapper.tcl
+run 10 us
+run 10 us
+run 10 us
+relaunch_sim
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 1 s
+relaunch_sim
+relaunch_sim
+run 1 s
+relaunch_sim
+relaunch_sim

@@ -1,0 +1,4 @@
+Running: xsim.dir/tb_accelerator_ethernet_axi_wrapper_behav/xsimk.exe -simmode gui -wdb tb_accelerator_ethernet_axi_wrapper_behav.wdb -simrunnum 0 -socket 52004
+Design successfully loaded
+Design Loading Memory Usage: 18644 KB (Peak: 18644 KB)
+Design Loading CPU Usage: 124 ms

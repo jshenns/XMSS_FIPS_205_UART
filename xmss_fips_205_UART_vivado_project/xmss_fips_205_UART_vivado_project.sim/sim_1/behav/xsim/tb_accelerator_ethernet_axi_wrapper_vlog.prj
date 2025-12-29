@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef" \
+"../../../../xmss_fips_205_UART_vivado_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v" \
+"../../../../xmss_fips_205_UART_vivado_project.gen/sources_1/ip/sig_fifo/sig_fifo_sim_netlist.v" \
+"../../../../xmss_fips_205_UART_vivado_project.gen/sources_1/ip/my_bram_xmss_node_2/my_bram_xmss_node_2_sim_netlist.v" \
+"../../../../../src/uart_rx.v" \
+"../../../../../src/uart_tx.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

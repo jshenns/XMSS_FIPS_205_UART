@@ -1,0 +1,708 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Aug 26 11:16:03 2025
+# Process ID         : 24140
+# Current directory  : C:/Users/joshe/Documents/XMSS_FIPS_205_UART
+# Command line       : vivado.exe -mode tcl -source tcl\build.tcl
+# Log file           : C:/Users/joshe/Documents/XMSS_FIPS_205_UART/vivado.log
+# Journal file       : C:/Users/joshe/Documents/XMSS_FIPS_205_UART\vivado.jou
+# Running On         : JoshLaptop
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 185H
+# CPU Frequency      : 3072 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 22
+# Host memory        : 33945 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36093 MB
+# Available Virtual  : 15780 MB
+#-----------------------------------------------------------
+source {tcl\build.tcl}
+# set project_name "xmss_fips_205_UART_vivado_project"
+# set project_dir "./$project_name"  
+# set src_dir "./src"   
+# create_project $project_name $project_dir -force
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 657.035 ; gain = 230.465
+# set_property board_part digilentinc.com:arty-a7-100:part0:1.1 [current_project]
+WARNING: [Project 1-153] The current project device 'xc7vx485tffg1157-1' does not match with the device on the 'DIGILENTINC.COM:ARTY-A7-100:PART0:1.1' board part. A device change to match the device on 'DIGILENTINC.COM:ARTY-A7-100:PART0:1.1' board part is being done. Please upgrade the IP in the project via the upgrade_ip command or by selecting Reports => Reports IP Status.
+WARNING: [Ipconfig 75-871] Could not load NoC clock tree from device
+WARNING: [Ipconfig 75-570] Unable to create NoC or AIE Models.
+INFO: [Project 1-152] Project part set to artix7 (xc7a100tcsg324-1)
+# set hdl_files [glob -nocomplain $src_dir/*.vhd $src_dir/*.v  $src_dir/*.edn]
+# foreach file $hdl_files {
+#     add_files $file
+# }
+# create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name my_bram_xmss_node_2
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.2/data/ip'.
+# set_property -dict [list \
+#   CONFIG.Operating_Mode_A {READ_FIRST} \
+#   CONFIG.Write_Depth_A {256} \
+#   CONFIG.Write_Width_A {256} \
+# ] [get_ips my_bram_xmss_node_2]
+# generate_target all [get_files  **/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.srcs/sources_1/ip/my_bram_xmss_node_2/my_bram_xmss_node_2.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'my_bram_xmss_node_2'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'my_bram_xmss_node_2'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'my_bram_xmss_node_2'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'my_bram_xmss_node_2'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'my_bram_xmss_node_2'...
+# catch { config_ip_cache -export [get_ips -all my_bram_xmss_node_2] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: my_bram_xmss_node_2
+# export_ip_user_files -of_objects [get_files **/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.srcs/sources_1/ip/my_bram_xmss_node_2/my_bram_xmss_node_2.xci] -no_script -sync -force -quiet
+# create_ip_run [get_files -of_objects [get_fileset sources_1] **/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.srcs/sources_1/ip/my_bram_xmss_node_2/my_bram_xmss_node_2.xci]
+# launch_runs my_bram_xmss_node_2_synth_1 -jobs 8
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: my_bram_xmss_node_2
+[Tue Aug 26 11:16:27 2025] Launched my_bram_xmss_node_2_synth_1...
+Run output will be captured here: C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.runs/my_bram_xmss_node_2_synth_1/runme.log
+# create_ip -name fifo_generator -vendor xilinx.com -library ip -version 13.2 -module_name sig_fifo
+# set_property -dict [list \
+#   CONFIG.Input_Data_Width {256} \
+#   CONFIG.Input_Depth {128} \
+# ] [get_ips sig_fifo]
+# generate_target {instantiation_template} [get_files **/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.srcs/sources_1/ip/sig_fifo/sig_fifo.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'sig_fifo'...
+# generate_target all [get_files  **/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.srcs/sources_1/ip/sig_fifo/sig_fifo.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'sig_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'sig_fifo'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'sig_fifo'...
+# catch { config_ip_cache -export [get_ips -all sig_fifo] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: sig_fifo
+# export_ip_user_files -of_objects [get_files **/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.srcs/sources_1/ip/sig_fifo/sig_fifo.xci] -no_script -sync -force -quiet
+# create_ip_run [get_files -of_objects [get_fileset sources_1] **/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.srcs/sources_1/ip/sig_fifo/sig_fifo.xci]
+# launch_runs sig_fifo_synth_1 -jobs 8
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: sig_fifo
+[Tue Aug 26 11:16:28 2025] Launched sig_fifo_synth_1...
+Run output will be captured here: C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.runs/sig_fifo_synth_1/runme.log
+# create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+create_ip: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 932.336 ; gain = 219.785
+# set_property -dict [list \
+#   CONFIG.CLKOUT1_JITTER {151.636} \
+#   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50} \
+#   CONFIG.MMCM_CLKOUT0_DIVIDE_F {20.000} \
+#   CONFIG.USE_RESET {false} \
+# ] [get_ips clk_wiz_0]
+# generate_target {instantiation_template} [get_files **/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+# generate_target all [get_files  **/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+# catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_wiz_0
+# export_ip_user_files -of_objects [get_files **/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+# create_ip_run [get_files -of_objects [get_fileset sources_1] **/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+# launch_runs clk_wiz_0_synth_1 -jobs 8
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_wiz_0
+[Tue Aug 26 11:16:41 2025] Launched clk_wiz_0_synth_1...
+Run output will be captured here: C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.runs/clk_wiz_0_synth_1/runme.log
+# update_compile_order -fileset sources_1
+# move_files -fileset sim_1 [get_files **/XMSS_FIPS_205_UART/src/tb_control_system.vhd]
+# add_files -fileset constrs_1 -norecurse ../XMSS_FIPS_205_UART/xdc/Arty-A7-100-Master.xdc
+# import_files -fileset constrs_1 ../XMSS_FIPS_205_UART/xdc/Arty-A7-100-Master.xdc
+# start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2024.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_accelerator_ethernet_axi_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2024.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_accelerator_ethernet_axi_wrapper' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_accelerator_ethernet_axi_wrapper_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.gen/sources_1/ip/sig_fifo/sim/sig_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sig_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.gen/sources_1/ip/my_bram_xmss_node_2/sim/my_bram_xmss_node_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module my_bram_xmss_node_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sha256_core.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sha256_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sha256_k_constants.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sha256_k_constants
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sha256_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sha256_stream
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sha256_w_mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sha256_w_mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/uart_rx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_rx
+WARNING: [VRFC 10-3380] identifier 'PAYLOAD_BITS' is used before its declaration [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/uart_rx.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/uart_tx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx
+WARNING: [VRFC 10-3380] identifier 'PAYLOAD_BITS' is used before its declaration [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/uart_tx.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj tb_accelerator_ethernet_axi_wrapper_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/compression_input_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'compression_input_mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sig_fifo_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sig_fifo_mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/chain.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'chain'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/hash_input_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'hash_input_mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/triangle_hash_unit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'triangle_hash_unit'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/wots_pkgen.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'wots_pkGen'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_node_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xmss_node_mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_node.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xmss_node'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/chain_input_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'chain_input_mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/wots_sign.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'wots_sign'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_sign.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xmss_sign'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_pkFromSig.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xmss_pkFromSig'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/wots_pkfromsig.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'wots_pkFromSig'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/control_system.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'control_system'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/wrapper_fifo_mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'wrapper_fifo_mux'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/accelerator_ethernet_axi_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'accelerator_ethernet_axi_wrapper'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/tb_control_system.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_accelerator_ethernet_axi_wrapper'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_11 -L blk_mem_gen_v8_4_9 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_accelerator_ethernet_axi_wrapper_behav xil_defaultlib.tb_accelerator_ethernet_axi_wrapper xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_11 -L blk_mem_gen_v8_4_9 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_accelerator_ethernet_axi_wrapper_behav xil_defaultlib.tb_accelerator_ethernet_axi_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-718] formal port <clk> does not exist in entity <top>.  Please compare the definition of block <top> to its component declaration and its instantion to detect the mismatch. [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/tb_control_system.vhd:14]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1742.953 ; gain = 12.012
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_accelerator_ethernet_axi_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2024.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_accelerator_ethernet_axi_wrapper' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+ERROR: [Common 17-180] Spawn failed: No error
+"xvlog --incr --relax -prj tb_accelerator_ethernet_axi_wrapper_vlog.prj"
+"xvhdl --incr --relax -prj tb_accelerator_ethernet_axi_wrapper_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/tb_control_system.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_accelerator_ethernet_axi_wrapper'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+ERROR: [USF-XSim-62] 'compile' step failed with error(s) while executing 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim/compile.bat' script. Please check that the file has the correct 'read/write/execute' permissions and the Tcl console output for any other possible errors or warnings.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_accelerator_ethernet_axi_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2024.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_accelerator_ethernet_axi_wrapper' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_accelerator_ethernet_axi_wrapper_vlog.prj"
+"xvhdl --incr --relax -prj tb_accelerator_ethernet_axi_wrapper_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_11 -L blk_mem_gen_v8_4_9 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_accelerator_ethernet_axi_wrapper_behav xil_defaultlib.tb_accelerator_ethernet_axi_wrapper xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_11 -L blk_mem_gen_v8_4_9 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_accelerator_ethernet_axi_wrapper_behav xil_defaultlib.tb_accelerator_ethernet_axi_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling architecture behavioral of entity xil_defaultlib.compression_input_mux [compression_input_mux_default]
+Compiling module xil_defaultlib.sha256_k_constants
+Compiling module xil_defaultlib.sha256_w_mem
+Compiling module xil_defaultlib.sha256_core
+Compiling module xil_defaultlib.sha256_stream
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9_output_stage(...
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9_output_stage(...
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9(C_FAMILY="art...
+Compiling module xil_defaultlib.my_bram_xmss_node_2
+Compiling architecture behavioral of entity xil_defaultlib.sig_fifo_mux [sig_fifo_mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.chain [chain_default]
+Compiling architecture behavioral of entity xil_defaultlib.hash_input_mux [hash_input_mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.triangle_hash_unit [triangle_hash_unit_default]
+Compiling architecture behavioral of entity xil_defaultlib.wots_pkGen [wots_pkgen_default]
+Compiling architecture behavioral of entity xil_defaultlib.xmss_node_mux [xmss_node_mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.xmss_node [xmss_node_default]
+Compiling architecture behavioral of entity xil_defaultlib.chain_input_mux [chain_input_mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.wots_sign [wots_sign_default]
+Compiling architecture behavioral of entity xil_defaultlib.xmss_sign [xmss_sign_default]
+Compiling architecture behavioral of entity xil_defaultlib.xmss_pkFromSig [xmss_pkfromsig_default]
+Compiling architecture behavioral of entity xil_defaultlib.wots_pkFromSig [wots_pkfromsig_default]
+Compiling architecture behavioral of entity xil_defaultlib.control_system [control_system_default]
+Compiling module fifo_generator_v13_2_11.fifo_generator_v13_2_11_bhv_ver_...
+Compiling module fifo_generator_v13_2_11.fifo_generator_v13_2_11_CONV_VER...
+Compiling module fifo_generator_v13_2_11.fifo_generator_vlog_beh(C_COMMON...
+Compiling module xil_defaultlib.sig_fifo
+Compiling architecture behavioral of entity xil_defaultlib.wrapper_fifo_mux [wrapper_fifo_mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.accelerator_ethernet_axi_wrapper [accelerator_ethernet_axi_wrapper...]
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=10.0,...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.uart_rx(BIT_RATE=115200,CLK_HZ=5...
+Compiling module xil_defaultlib.uart_tx(BIT_RATE=115200,CLK_HZ=5...
+Compiling architecture behavioral of entity xil_defaultlib.top [top_default]
+Compiling architecture behavior of entity xil_defaultlib.tb_accelerator_ethernet_axi_wrap...
+Built simulation snapshot tb_accelerator_ethernet_axi_wrapper_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1777.227 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_accelerator_ethernet_axi_wrapper_behav -key {Behavioral:sim_1:Functional:tb_accelerator_ethernet_axi_wrapper} -tclbatch {tb_accelerator_ethernet_axi_wrapper.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_accelerator_ethernet_axi_wrapper.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module tb_accelerator_ethernet_axi_wrapper.uut.my_accelerator.my_control_system.my_bram_xmss_node.inst.native_mem_module.blk_mem_gen_v8_4_9_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_accelerator_ethernet_axi_wrapper_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 1809.953 ; gain = 32.727
+run 10 us
+run 10 us
+run 10 us
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_accelerator_ethernet_axi_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2024.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_accelerator_ethernet_axi_wrapper' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_accelerator_ethernet_axi_wrapper_vlog.prj"
+"xvhdl --incr --relax -prj tb_accelerator_ethernet_axi_wrapper_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_accelerator_ethernet_axi_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_11 -L blk_mem_gen_v8_4_9 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_accelerator_ethernet_axi_wrapper_behav xil_defaultlib.tb_accelerator_ethernet_axi_wrapper xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_11 -L blk_mem_gen_v8_4_9 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_accelerator_ethernet_axi_wrapper_behav xil_defaultlib.tb_accelerator_ethernet_axi_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+Block Memory Generator module tb_accelerator_ethernet_axi_wrapper.uut.my_accelerator.my_control_system.my_bram_xmss_node.inst.native_mem_module.blk_mem_gen_v8_4_9_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1825.098 ; gain = 12.633
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 1 s
+run: Time (s): cpu = 00:02:55 ; elapsed = 00:13:05 . Memory (MB): peak = 2980.805 ; gain = 1046.078
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+ERROR: [Common 17-180] Spawn failed: No error
+relaunch_sim
+INFO: xsimkernel Simulation Memory Usage: 40132 KB (Peak: 40132 KB), Simulation CPU Usage: 648531 ms
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_accelerator_ethernet_axi_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_accelerator_ethernet_axi_wrapper_vlog.prj"
+"xvhdl --incr --relax -prj tb_accelerator_ethernet_axi_wrapper_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/tb_control_system.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_accelerator_ethernet_axi_wrapper'
+ERROR: [VRFC 10-2989] 'rx_valid' is not declared [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/tb_control_system.vhd:74]
+ERROR: [VRFC 10-3758] type 'std_logic' does not match with a string literal [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/tb_control_system.vhd:75]
+ERROR: [VRFC 10-2989] 'rx_valid' is not declared [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/tb_control_system.vhd:78]
+ERROR: [VRFC 10-9458] unit 'behavior' is ignored due to previous errors [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/tb_control_system.vhd:9]
+INFO: [VRFC 10-8704] VHDL file 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/tb_control_system.vhd' is ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\accelerator_ethernet_axi_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\xmss_fips_205_UART_vivado_project\xmss_fips_205_UART_vivado_project.gen\sources_1\ip\sig_fifo\sim\sig_fifo.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\accelerator_ethernet_axi_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\xmss_fips_205_UART_vivado_project\xmss_fips_205_UART_vivado_project.gen\sources_1\ip\sig_fifo\sim\sig_fifo.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\accelerator_ethernet_axi_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\xmss_fips_205_UART_vivado_project\xmss_fips_205_UART_vivado_project.gen\sources_1\ip\sig_fifo\sim\sig_fifo.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\xmss_fips_205_UART_vivado_project\xmss_fips_205_UART_vivado_project.gen\sources_1\ip\sig_fifo\sim\sig_fifo.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\xmss_fips_205_UART_vivado_project\xmss_fips_205_UART_vivado_project.gen\sources_1\ip\sig_fifo\sim\sig_fifo.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\accelerator_ethernet_axi_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\xmss_fips_205_UART_vivado_project\xmss_fips_205_UART_vivado_project.gen\sources_1\ip\sig_fifo\sim\sig_fifo.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\accelerator_ethernet_axi_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\xmss_fips_205_UART_vivado_project\xmss_fips_205_UART_vivado_project.gen\sources_1\ip\sig_fifo\sim\sig_fifo.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\accelerator_ethernet_axi_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\xmss_fips_205_UART_vivado_project\xmss_fips_205_UART_vivado_project.gen\sources_1\ip\sig_fifo\sim\sig_fifo.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\accelerator_ethernet_axi_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\accelerator_ethernet_axi_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\accelerator_ethernet_axi_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\xmss_fips_205_UART_vivado_project\xmss_fips_205_UART_vivado_project.gen\sources_1\ip\sig_fifo\sim\sig_fifo.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\accelerator_ethernet_axi_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\xmss_fips_205_UART_vivado_project\xmss_fips_205_UART_vivado_project.gen\sources_1\ip\sig_fifo\sim\sig_fifo.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\accelerator_ethernet_axi_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\xmss_fips_205_UART_vivado_project\xmss_fips_205_UART_vivado_project.gen\sources_1\ip\sig_fifo\sim\sig_fifo.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\accelerator_ethernet_axi_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\xmss_fips_205_UART_vivado_project\xmss_fips_205_UART_vivado_project.gen\sources_1\ip\sig_fifo\sim\sig_fifo.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\accelerator_ethernet_axi_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\xmss_fips_205_UART_vivado_project\xmss_fips_205_UART_vivado_project.gen\sources_1\ip\sig_fifo\sim\sig_fifo.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\accelerator_ethernet_axi_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\xmss_fips_205_UART_vivado_project\xmss_fips_205_UART_vivado_project.gen\sources_1\ip\sig_fifo\sim\sig_fifo.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\accelerator_ethernet_axi_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\xmss_fips_205_UART_vivado_project\xmss_fips_205_UART_vivado_project.gen\sources_1\ip\sig_fifo\sim\sig_fifo.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\accelerator_ethernet_axi_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\accelerator_ethernet_axi_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\accelerator_ethernet_axi_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\xmss_fips_205_UART_vivado_project\xmss_fips_205_UART_vivado_project.gen\sources_1\ip\sig_fifo\sim\sig_fifo.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\accelerator_ethernet_axi_wrapper.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\tb_control_system.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\top.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\wrapper_fifo_mux.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\xmss_fips_205_UART_vivado_project\xmss_fips_205_UART_vivado_project.gen\sources_1\ip\sig_fifo\sim\sig_fifo.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\src\uart_rx.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\xmss_fips_205_UART_vivado_project\xmss_fips_205_UART_vivado_project.gen\sources_1\ip\sig_fifo\sim\sig_fifo.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\joshe\Documents\XMSS_FIPS_205_UART\xmss_fips_205_UART_vivado_project\xmss_fips_205_UART_vivado_project.gen\sources_1\ip\sig_fifo\sim\sig_fifo.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_accelerator_ethernet_axi_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_accelerator_ethernet_axi_wrapper_vlog.prj"
+"xvhdl --incr --relax -prj tb_accelerator_ethernet_axi_wrapper_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/tb_control_system.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_accelerator_ethernet_axi_wrapper'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_accelerator_ethernet_axi_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_11 -L blk_mem_gen_v8_4_9 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_accelerator_ethernet_axi_wrapper_behav xil_defaultlib.tb_accelerator_ethernet_axi_wrapper xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_11 -L blk_mem_gen_v8_4_9 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_accelerator_ethernet_axi_wrapper_behav xil_defaultlib.tb_accelerator_ethernet_axi_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling architecture behavioral of entity xil_defaultlib.compression_input_mux [compression_input_mux_default]
+Compiling module xil_defaultlib.sha256_k_constants
+Compiling module xil_defaultlib.sha256_w_mem
+Compiling module xil_defaultlib.sha256_core
+Compiling module xil_defaultlib.sha256_stream
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9_output_stage(...
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9_output_stage(...
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_9.blk_mem_gen_v8_4_9(C_FAMILY="art...
+Compiling module xil_defaultlib.my_bram_xmss_node_2
+Compiling architecture behavioral of entity xil_defaultlib.sig_fifo_mux [sig_fifo_mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.chain [chain_default]
+Compiling architecture behavioral of entity xil_defaultlib.hash_input_mux [hash_input_mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.triangle_hash_unit [triangle_hash_unit_default]
+Compiling architecture behavioral of entity xil_defaultlib.wots_pkGen [wots_pkgen_default]
+Compiling architecture behavioral of entity xil_defaultlib.xmss_node_mux [xmss_node_mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.xmss_node [xmss_node_default]
+Compiling architecture behavioral of entity xil_defaultlib.chain_input_mux [chain_input_mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.wots_sign [wots_sign_default]
+Compiling architecture behavioral of entity xil_defaultlib.xmss_sign [xmss_sign_default]
+Compiling architecture behavioral of entity xil_defaultlib.xmss_pkFromSig [xmss_pkfromsig_default]
+Compiling architecture behavioral of entity xil_defaultlib.wots_pkFromSig [wots_pkfromsig_default]
+Compiling architecture behavioral of entity xil_defaultlib.control_system [control_system_default]
+Compiling module fifo_generator_v13_2_11.fifo_generator_v13_2_11_bhv_ver_...
+Compiling module fifo_generator_v13_2_11.fifo_generator_v13_2_11_CONV_VER...
+Compiling module fifo_generator_v13_2_11.fifo_generator_vlog_beh(C_COMMON...
+Compiling module xil_defaultlib.sig_fifo
+Compiling architecture behavioral of entity xil_defaultlib.wrapper_fifo_mux [wrapper_fifo_mux_default]
+Compiling architecture behavioral of entity xil_defaultlib.accelerator_ethernet_axi_wrapper [accelerator_ethernet_axi_wrapper...]
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=10.0,...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.uart_rx(BIT_RATE=115200,CLK_HZ=5...
+Compiling module xil_defaultlib.uart_tx(BIT_RATE=115200,CLK_HZ=5...
+Compiling architecture behavioral of entity xil_defaultlib.top [top_default]
+Compiling architecture behavior of entity xil_defaultlib.tb_accelerator_ethernet_axi_wrap...
+Built simulation snapshot tb_accelerator_ethernet_axi_wrapper_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+Time resolution is 1 ps
+Block Memory Generator module tb_accelerator_ethernet_axi_wrapper.uut.my_accelerator.my_control_system.my_bram_xmss_node.inst.native_mem_module.blk_mem_gen_v8_4_9_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 2980.805 ; gain = 0.000
+run 1 s
+WARNING: [Simulator 45-29] Cannot open source file /wrk/ci/prod/2024.2/sw/continuous/3059/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v: file does not exist.
+run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2980.805 ; gain = 0.000
+relaunch_sim
+INFO: xsimkernel Simulation Memory Usage: 40052 KB (Peak: 40052 KB), Simulation CPU Usage: 12718 ms
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_accelerator_ethernet_axi_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_accelerator_ethernet_axi_wrapper_vlog.prj"
+"xvhdl --incr --relax -prj tb_accelerator_ethernet_axi_wrapper_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_accelerator_ethernet_axi_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_11 -L blk_mem_gen_v8_4_9 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_accelerator_ethernet_axi_wrapper_behav xil_defaultlib.tb_accelerator_ethernet_axi_wrapper xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2024.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L fifo_generator_v13_2_11 -L blk_mem_gen_v8_4_9 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_accelerator_ethernet_axi_wrapper_behav xil_defaultlib.tb_accelerator_ethernet_axi_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+Block Memory Generator module tb_accelerator_ethernet_axi_wrapper.uut.my_accelerator.my_control_system.my_bram_xmss_node.inst.native_mem_module.blk_mem_gen_v8_4_9_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 2999.266 ; gain = 0.469
+relaunch_sim

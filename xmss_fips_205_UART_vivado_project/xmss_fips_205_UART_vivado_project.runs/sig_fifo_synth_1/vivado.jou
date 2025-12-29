@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Fri Aug 29 08:57:21 2025
+# Process ID         : 16116
+# Current directory  : C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.runs/sig_fifo_synth_1
+# Command line       : vivado.exe -log sig_fifo.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sig_fifo.tcl
+# Log file           : C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.runs/sig_fifo_synth_1/sig_fifo.vds
+# Journal file       : C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.runs/sig_fifo_synth_1\vivado.jou
+# Running On         : JoshLaptop
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 185H
+# CPU Frequency      : 3072 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 22
+# Host memory        : 33945 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36093 MB
+# Available Virtual  : 25891 MB
+#-----------------------------------------------------------
+source sig_fifo.tcl -notrace

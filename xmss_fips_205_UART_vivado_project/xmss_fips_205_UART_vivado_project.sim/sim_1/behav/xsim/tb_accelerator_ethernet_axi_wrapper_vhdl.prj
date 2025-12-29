@@ -1,0 +1,29 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../src/compression_input_mux.vhd" \
+"../../../../../src/sig_fifo_mux.vhd" \
+"../../../../../src/chain.vhd" \
+"../../../../../src/hash_input_mux.vhd" \
+"../../../../../src/triangle_hash_unit.vhd" \
+"../../../../../src/wots_pkgen.vhd" \
+"../../../../../src/xmss_node_mux.vhd" \
+"../../../../../src/xmss_node.vhd" \
+"../../../../../src/chain_input_mux.vhd" \
+"../../../../../src/wots_sign.vhd" \
+"../../../../../src/xmss_sign.vhd" \
+"../../../../../src/xmss_pkFromSig.vhd" \
+"../../../../../src/wots_pkfromsig.vhd" \
+"../../../../../src/control_system.vhd" \
+"../../../../../src/wrapper_fifo_mux.vhd" \
+"../../../../../src/accelerator_ethernet_axi_wrapper.vhd" \
+"../../../../../src/keccak_globals.vhd" \
+"../../../../../src/chi_iota_theta.vhd" \
+"../../../../../src/keccak.vhd" \
+"../../../../../src/keccak_round_constants_gen.vhd" \
+"../../../../../src/keccak_stream.vhd" \
+"../../../../../src/rho_pi.vhd" \
+"../../../../../src/top.vhd" \
+"../../../../../src/tb_control_system.vhd" \
+
+# Do not sort compile order
+nosort

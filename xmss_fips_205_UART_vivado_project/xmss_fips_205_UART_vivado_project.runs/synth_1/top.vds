@@ -1,0 +1,853 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Tue Sep  2 09:09:07 2025
+# Process ID         : 13372
+# Current directory  : C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.runs/synth_1
+# Command line       : vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file           : C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.runs/synth_1/top.vds
+# Journal file       : C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.runs/synth_1\vivado.jou
+# Running On         : JoshLaptop
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 185H
+# CPU Frequency      : 3072 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 22
+# Host memory        : 33945 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36093 MB
+# Available Virtual  : 15776 MB
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.srcs/utils_1/imports/synth_1/top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 22768
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1222.262 ; gain = 492.445
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/top.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'accelerator_ethernet_axi_wrapper' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/accelerator_ethernet_axi_wrapper.vhd:22]
+INFO: [Synth 8-638] synthesizing module 'control_system' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/control_system.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'compression_input_mux' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/compression_input_mux.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'compression_input_mux' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/compression_input_mux.vhd:38]
+INFO: [Synth 8-3491] module 'sha256_stream' declared at 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sha256_stream.v:40' bound to instance 'compresion_core' of component 'sha256_stream' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/control_system.vhd:345]
+INFO: [Synth 8-6157] synthesizing module 'sha256_stream' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sha256_stream.v:40]
+INFO: [Synth 8-6157] synthesizing module 'sha256_core' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sha256_core.v:42]
+INFO: [Synth 8-6157] synthesizing module 'sha256_k_constants' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sha256_k_constants.v:41]
+INFO: [Synth 8-6155] done synthesizing module 'sha256_k_constants' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sha256_k_constants.v:41]
+INFO: [Synth 8-6157] synthesizing module 'sha256_w_mem' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sha256_w_mem.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'sha256_w_mem' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sha256_w_mem.v:42]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sha256_core.v:493]
+INFO: [Synth 8-6155] done synthesizing module 'sha256_core' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sha256_core.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'sha256_stream' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sha256_stream.v:40]
+INFO: [Synth 8-6157] synthesizing module 'my_bram_xmss_node_2' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.runs/synth_1/.Xil/Vivado-13372-JoshLaptop/realtime/my_bram_xmss_node_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'my_bram_xmss_node_2' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.runs/synth_1/.Xil/Vivado-13372-JoshLaptop/realtime/my_bram_xmss_node_2_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'sig_fifo_mux' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sig_fifo_mux.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'sig_fifo_mux' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sig_fifo_mux.vhd:47]
+INFO: [Synth 8-638] synthesizing module 'chain' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/chain.vhd:34]
+INFO: [Synth 8-226] default block is never used [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/chain.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'chain' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/chain.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'hash_input_mux' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/hash_input_mux.vhd:88]
+INFO: [Synth 8-256] done synthesizing module 'hash_input_mux' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/hash_input_mux.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'triangle_hash_unit' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/triangle_hash_unit.vhd:24]
+INFO: [Synth 8-3491] module 'sha256_stream' declared at 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sha256_stream.v:40' bound to instance 'sha256_stream_inst0' of component 'sha256_stream' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/triangle_hash_unit.vhd:93]
+INFO: [Synth 8-3491] module 'sha256_stream' declared at 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sha256_stream.v:40' bound to instance 'sha256_stream_inst1' of component 'sha256_stream' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/triangle_hash_unit.vhd:107]
+INFO: [Synth 8-3491] module 'sha256_stream' declared at 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/sha256_stream.v:40' bound to instance 'sha256_stream_inst2' of component 'sha256_stream' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/triangle_hash_unit.vhd:121]
+INFO: [Synth 8-256] done synthesizing module 'triangle_hash_unit' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/triangle_hash_unit.vhd:24]
+INFO: [Synth 8-638] synthesizing module 'wots_pkGen' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/wots_pkgen.vhd:63]
+INFO: [Synth 8-226] default block is never used [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/wots_pkgen.vhd:116]
+INFO: [Synth 8-256] done synthesizing module 'wots_pkGen' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/wots_pkgen.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'xmss_node_mux' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_node_mux.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'xmss_node_mux' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_node_mux.vhd:41]
+INFO: [Synth 8-638] synthesizing module 'xmss_node' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_node.vhd:67]
+INFO: [Synth 8-226] default block is never used [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_node.vhd:126]
+INFO: [Synth 8-256] done synthesizing module 'xmss_node' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_node.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'chain_input_mux' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/chain_input_mux.vhd:84]
+INFO: [Synth 8-256] done synthesizing module 'chain_input_mux' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/chain_input_mux.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'wots_sign' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/wots_sign.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'wots_sign' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/wots_sign.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'xmss_sign' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_sign.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'xmss_sign' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_sign.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'xmss_pkFromSig' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_pkFromSig.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'xmss_pkFromSig' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_pkFromSig.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'wots_pkFromSig' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/wots_pkfromsig.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'wots_pkFromSig' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/wots_pkfromsig.vhd:51]
+INFO: [Synth 8-226] default block is never used [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/control_system.vhd:873]
+INFO: [Synth 8-256] done synthesizing module 'control_system' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/control_system.vhd:40]
+INFO: [Synth 8-6157] synthesizing module 'sig_fifo' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.runs/synth_1/.Xil/Vivado-13372-JoshLaptop/realtime/sig_fifo_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'sig_fifo' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.runs/synth_1/.Xil/Vivado-13372-JoshLaptop/realtime/sig_fifo_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'wrapper_fifo_mux' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/wrapper_fifo_mux.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'wrapper_fifo_mux' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/wrapper_fifo_mux.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'accelerator_ethernet_axi_wrapper' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/accelerator_ethernet_axi_wrapper.vhd:22]
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.runs/synth_1/.Xil/Vivado-13372-JoshLaptop/realtime/clk_wiz_0_stub.v:6' bound to instance 'my_clk_wiz' of component 'clk_wiz_0' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/top.vhd:126]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.runs/synth_1/.Xil/Vivado-13372-JoshLaptop/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.runs/synth_1/.Xil/Vivado-13372-JoshLaptop/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-3491] module 'uart_rx' declared at 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/uart_rx.v:8' bound to instance 'my_uart_rx' of component 'uart_rx' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/top.vhd:129]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/uart_rx.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/uart_rx.v:8]
+INFO: [Synth 8-3491] module 'uart_tx' declared at 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/uart_tx.v:9' bound to instance 'my_uart_tx' of component 'uart_tx' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/top.vhd:140]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/uart_tx.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/uart_tx.v:9]
+INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/top.vhd:46]
+WARNING: [Synth 8-6014] Unused sequential element idx_reg_reg was removed.  [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_sign.vhd:140]
+WARNING: [Synth 8-6014] Unused sequential element k_reg was removed.  [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_sign.vhd:155]
+WARNING: [Synth 8-6014] Unused sequential element fifo_count_reg was removed.  [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_sign.vhd:222]
+WARNING: [Synth 8-6014] Unused sequential element sig_in_reg_reg was removed.  [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/control_system.vhd:855]
+WARNING: [Synth 8-6014] Unused sequential element pk_out_reg_reg was removed.  [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/control_system.vhd:858]
+WARNING: [Synth 8-6014] Unused sequential element pk_fromSig_out_reg_reg was removed.  [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/control_system.vhd:859]
+WARNING: [Synth 8-6014] Unused sequential element sig_xmss_out_reg_reg was removed.  [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/control_system.vhd:860]
+WARNING: [Synth 8-6014] Unused sequential element fifo_count_reg was removed.  [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/control_system.vhd:884]
+WARNING: [Synth 8-7129] Port full in module wots_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port empty in module wots_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[255] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[254] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[253] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[252] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[251] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[250] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[249] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[248] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[247] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[246] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[245] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[244] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[243] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[242] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[241] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[240] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[239] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[238] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[237] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[236] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[235] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[234] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[233] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[232] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[231] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[230] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[229] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[228] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[227] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[226] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[225] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[224] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[223] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[222] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[221] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[220] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[219] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[218] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[217] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[216] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[215] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[214] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[213] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[212] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[211] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[210] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[209] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[208] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[207] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[206] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[205] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[204] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[203] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[202] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[201] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[200] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[199] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[198] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[197] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[196] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[195] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[194] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[193] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[192] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[191] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[190] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[189] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[188] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[187] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[186] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[185] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[184] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[183] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[182] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[181] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[180] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[179] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[178] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[177] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[176] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[175] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[174] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[173] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[172] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[171] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[170] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[169] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[168] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[167] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[166] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[165] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[164] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[163] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[162] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[161] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[160] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[159] in module xmss_pkFromSig is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sig[158] in module xmss_pkFromSig is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1434.883 ; gain = 705.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1434.883 ; gain = 705.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1434.883 ; gain = 705.066
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.301 . Memory (MB): peak = 1434.883 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.gen/sources_1/ip/my_bram_xmss_node_2/my_bram_xmss_node_2/my_bram_xmss_node_2_in_context.xdc] for cell 'my_accelerator/my_control_system/my_bram_xmss_node'
+Finished Parsing XDC File [c:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.gen/sources_1/ip/my_bram_xmss_node_2/my_bram_xmss_node_2/my_bram_xmss_node_2_in_context.xdc] for cell 'my_accelerator/my_control_system/my_bram_xmss_node'
+Parsing XDC File [c:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.gen/sources_1/ip/sig_fifo/sig_fifo/sig_fifo_in_context.xdc] for cell 'my_accelerator/my_sig_fifo'
+Finished Parsing XDC File [c:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.gen/sources_1/ip/sig_fifo/sig_fifo/sig_fifo_in_context.xdc] for cell 'my_accelerator/my_sig_fifo'
+Parsing XDC File [c:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'my_clk_wiz'
+Finished Parsing XDC File [c:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'my_clk_wiz'
+Parsing XDC File [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.srcs/constrs_1/imports/xdc/Arty-A7-100-Master.xdc]
+Finished Parsing XDC File [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.srcs/constrs_1/imports/xdc/Arty-A7-100-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.srcs/constrs_1/imports/xdc/Arty-A7-100-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1532.539 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1532.539 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1532.539 ; gain = 802.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1532.539 ; gain = 802.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1532.539 ; gain = 802.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6702] IncrSynth : Design change found in an area of the design that prevents previous synthesis information being used, Reverting to default synthesis
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1532.539 ; gain = 802.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1532.539 ; gain = 802.723
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'sha256_ctrl_reg_reg' in module 'sha256_core'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'triangle_hash_unit'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'wots_pkGen'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xmss_node'
+WARNING: [Synth 8-3936] Found unconnected internal register 'csum_reg_reg' and it is trimmed from '16' to '12' bits. [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/wots_sign.vhd:146]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'wots_sign'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'xmss_sign'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'xmss_pkFromSig'
+WARNING: [Synth 8-3936] Found unconnected internal register 'csum_reg_reg' and it is trimmed from '16' to '12' bits. [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/wots_pkfromsig.vhd:173]
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'wots_pkFromSig'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'accelerator_ethernet_axi_wrapper'
+INFO: [Synth 8-802] inferred FSM for state register 'fsm_state_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'fsm_state_reg' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               CTRL_IDLE |                              001 |                               00
+             CTRL_ROUNDS |                              010 |                               01
+               CTRL_DONE |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sha256_ctrl_reg_reg' using encoding 'one-hot' in module 'sha256_core'
+WARNING: [Synth 8-327] inferring latch for variable 'hash_mode_reg' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/chain.vhd:58]
+WARNING: [Synth 8-327] inferring latch for variable 'hash_data_in_2_reg' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/chain.vhd:62]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                 hash_01 |                               01 |                               01
+                  hash_2 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'triangle_hash_unit'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                  sk_gen |                               01 |                               01
+              hash_chain |                               10 |                               10
+                compress |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'wots_pkGen'
+INFO: [Synth 8-3971] The signal "wots_pkGen:/tmp_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+                  leaves |                               01 |                               01
+                  hash_0 |                               10 |                               10
+                  hash_1 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'xmss_node'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                 base_2b |                              001 |                              001
+                checksum |                              010 |                              011
+          shift_checksum |                              011 |                              100
+                base_2b2 |                              100 |                              101
+                 sk_hash |                              101 |                              110
+                    hash |                              110 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'wots_sign'
+WARNING: [Synth 8-327] inferring latch for variable 'hash_mode_reg' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/wots_sign.vhd:92]
+WARNING: [Synth 8-327] inferring latch for variable 'hash_data_in_0_reg' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/wots_sign.vhd:93]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                            00001 |                              000
+               wots_sign |                            00010 |                              011
+               auth_calc |                            00100 |                              010
+                  k_calc |                            01000 |                              001
+               fifo_dump |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'xmss_sign'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+          wots_pkfromsig |                              001 |                              001
+                  k_calc |                              010 |                              010
+             grab_data_1 |                              011 |                              011
+                  verify |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'xmss_pkFromSig'
+WARNING: [Synth 8-327] inferring latch for variable 'wr_en_reg' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_pkFromSig.vhd:132]
+WARNING: [Synth 8-327] inferring latch for variable 'din_reg' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_pkFromSig.vhd:131]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                        000000001 |                             0000
+                 base_2b |                        000000010 |                             0001
+                checksum |                        000000100 |                             0010
+          shift_checksum |                        000001000 |                             0011
+                  tobyte |                        000010000 |                             0100
+             concatenate |                        000100000 |                             0101
+            sig_to_array |                        001000000 |                             0110
+                   chain |                        010000000 |                             0111
+                compress |                        100000000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'wots_pkFromSig'
+INFO: [Synth 8-3971] The signal "wots_pkFromSig:/tmp_array_reg" was recognized as a true dual port RAM template.
+WARNING: [Synth 8-327] inferring latch for variable 'din_reg' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/wots_pkfromsig.vhd:109]
+WARNING: [Synth 8-327] inferring latch for variable 'wr_en_reg' [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/wots_pkfromsig.vhd:110]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                FSM_IDLE |                               00 |                              000
+               FSM_START |                               11 |                              001
+                FSM_RECV |                               10 |                              010
+                FSM_STOP |                               01 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'fsm_state_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                FSM_IDLE |                               00 |                              000
+               FSM_START |                               11 |                              001
+                FSM_SEND |                               10 |                              010
+                FSM_STOP |                               01 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'fsm_state_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1532.539 ; gain = 802.723
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : Design change found in an area of the design that prevents previous synthesis information being used
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   33 Bit       Adders := 5     
+	   4 Input   32 Bit       Adders := 4     
+	   5 Input   32 Bit       Adders := 4     
+	   3 Input   32 Bit       Adders := 6     
+	   2 Input   32 Bit       Adders := 19    
+	   2 Input   31 Bit       Adders := 1     
+	   3 Input   31 Bit       Adders := 1     
+	   2 Input   17 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 1     
+	   3 Input   16 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 3     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 4     
+	   2 Input    4 Bit       Adders := 2     
++---XORs : 
+	   3 Input     32 Bit         XORs := 20    
+	   2 Input     32 Bit         XORs := 4     
++---Registers : 
+	              512 Bit    Registers := 4     
+	              256 Bit    Registers := 78    
+	               32 Bit    Registers := 111   
+	               16 Bit    Registers := 27    
+	               12 Bit    Registers := 2     
+	                8 Bit    Registers := 5     
+	                6 Bit    Registers := 4     
+	                4 Bit    Registers := 270   
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 86    
++---Multipliers : 
+	              18x32  Multipliers := 1     
++---RAMs : 
+	              16K Bit	(67 X 256 bit)          RAMs := 2     
++---Muxes : 
+	   2 Input  512 Bit        Muxes := 7     
+	   3 Input  256 Bit        Muxes := 1     
+	   2 Input  256 Bit        Muxes := 43    
+	   5 Input  256 Bit        Muxes := 3     
+	   7 Input  256 Bit        Muxes := 2     
+	   4 Input  256 Bit        Muxes := 9     
+	   9 Input  256 Bit        Muxes := 2     
+	   8 Input  256 Bit        Muxes := 8     
+	   2 Input   32 Bit        Muxes := 320   
+	   4 Input   32 Bit        Muxes := 6     
+	   9 Input   32 Bit        Muxes := 1     
+	   8 Input   32 Bit        Muxes := 2     
+	   2 Input   31 Bit        Muxes := 9     
+	   2 Input   30 Bit        Muxes := 8     
+	   2 Input   16 Bit        Muxes := 28    
+	   7 Input   16 Bit        Muxes := 2     
+	   9 Input   16 Bit        Muxes := 1     
+	   4 Input   16 Bit        Muxes := 2     
+	   8 Input   16 Bit        Muxes := 5     
+	   9 Input    9 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 15    
+	   4 Input    8 Bit        Muxes := 1     
+	   8 Input    8 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 4     
+	   5 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 5     
+	   2 Input    4 Bit        Muxes := 3     
+	   3 Input    3 Bit        Muxes := 4     
+	   2 Input    3 Bit        Muxes := 15    
+	   5 Input    3 Bit        Muxes := 1     
+	   7 Input    3 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 26    
+	   4 Input    2 Bit        Muxes := 9     
+	   8 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 173   
+	   3 Input    1 Bit        Muxes := 35    
+	   5 Input    1 Bit        Muxes := 31    
+	   7 Input    1 Bit        Muxes := 16    
+	   4 Input    1 Bit        Muxes := 57    
+	   9 Input    1 Bit        Muxes := 16    
+	   8 Input    1 Bit        Muxes := 16    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'k_calc_reg_reg' and it is trimmed from '16' to '1' bits. [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_pkFromSig.vhd:219]
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_wots_sign/\csum_reg_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_chain/hash_mode_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_wots_sign/hash_mode_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_wots_sign/hash_reset_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_chain/s_reg_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_wots_sign/\chain_i_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_wots_sign/\csum_array_reg[0][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_wots_sign/\new_message_reg[0][3] )
+WARNING: [Synth 8-3332] Sequential element (hash_mode_reg) is unused and will be removed from module wots_sign.
+INFO: [Synth 8-12192] Not enough pipeline registers after wide multiplier. Pipeline registers present is 0. Recommended levels of pipeline registers is 2. [C:/Users/joshe/Documents/XMSS_FIPS_205_UART/src/xmss_node.vhd:145]
+DSP Report: Generating DSP level_i0, operation Mode is: A*B.
+DSP Report: operator level_i0 is absorbed into DSP level_i0.
+DSP Report: operator level_i0 is absorbed into DSP level_i0.
+DSP Report: Generating DSP level_i0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator level_i0 is absorbed into DSP level_i0.
+DSP Report: operator level_i0 is absorbed into DSP level_i0.
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_xmss_sign/k_xmss_node_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_xmss_sign/sig_xmss_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_xmss_node/hash_reset_reg)
+INFO: [Synth 8-3971] The signal "my_wots_pkGen/tmp_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3971] The signal "my_wots_pkFromSig/tmp_array_reg" was recognized as a true dual port RAM template.
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/i_2/tmp_reg_async_reset_b' (FDCE) to 'my_wots_pkGen/i_2/tmp_reg_async_reset_b__0'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/i_2/tmp_array_reg_async_reset_b' (FDCE) to 'my_wots_pkFromSig/i_2/tmp_array_reg_async_reset_b__0'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_wots_pkFromSig/s_tlast_i_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_wots_pkFromSig/\stupid_count_reg[1] )
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/s_wots_chain_reg[4]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[0]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_s_reg[4]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/s_wots_chain_reg[5]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[0]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_s_reg[5]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/s_wots_chain_reg[6]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[0]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_s_reg[6]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/s_wots_chain_reg[7]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[0]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_s_reg[7]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/s_wots_chain_reg[8]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[0]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_s_reg[8]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/s_wots_chain_reg[9]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[0]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_s_reg[9]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/s_wots_chain_reg[10]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[0]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_s_reg[10]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/s_wots_chain_reg[11]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[0]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_s_reg[11]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/s_wots_chain_reg[12]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[0]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_s_reg[12]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/s_wots_chain_reg[13]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[0]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_s_reg[13]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/s_wots_chain_reg[14]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[0]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_s_reg[14]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/s_wots_chain_reg[15]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[0]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_s_reg[15]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/i_wots_chain_reg[0]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[1]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/i_wots_chain_reg[1]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[2]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/i_wots_chain_reg[2]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[3]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/i_wots_chain_reg[3]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/i_wots_chain_reg[4]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[5]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_i_reg[4]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[5]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/i_wots_chain_reg[5]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[6]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_i_reg[5]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[6]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/i_wots_chain_reg[6]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_i_reg[6]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/i_wots_chain_reg[7]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[8]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_i_reg[7]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[8]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/i_wots_chain_reg[8]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[9]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_i_reg[8]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[9]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/i_wots_chain_reg[9]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[10]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_i_reg[9]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[10]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/i_wots_chain_reg[10]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[11]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_i_reg[10]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[11]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/i_wots_chain_reg[11]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[12]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_i_reg[11]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[12]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/i_wots_chain_reg[12]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[13]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_i_reg[12]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[13]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/i_wots_chain_reg[13]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[14]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_i_reg[13]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[14]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkGen/i_wots_chain_reg[14]' (FDCE) to 'my_wots_pkGen/i_wots_chain_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/chain_i_reg[14]' (FDCE) to 'my_wots_pkFromSig/chain_i_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_wots_pkGen/\i_wots_chain_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_wots_pkFromSig/\chain_i_reg[15] )
+INFO: [Synth 8-3886] merging instance 'din_top_reg[0]' (FDE) to 'din_top_reg[1]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[0]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[1]' (FDE) to 'din_top_reg[2]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[1]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[2]' (FDE) to 'din_top_reg[3]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[2]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[3]' (FDE) to 'din_top_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[3]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[4]' (FDE) to 'din_top_reg[5]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[4]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[5]' (FDE) to 'din_top_reg[6]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[5]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[6]' (FDE) to 'din_top_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[6]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[7]' (FDE) to 'din_top_reg[8]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[7]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[8]' (FDE) to 'din_top_reg[9]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[8]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[9]' (FDE) to 'din_top_reg[10]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[9]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[10]' (FDE) to 'din_top_reg[11]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[10]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[11]' (FDE) to 'din_top_reg[12]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[11]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[12]' (FDE) to 'din_top_reg[13]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[12]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[13]' (FDE) to 'din_top_reg[14]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[13]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[14]' (FDE) to 'din_top_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[14]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[15]' (FDE) to 'din_top_reg[16]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[15]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[16]' (FDE) to 'din_top_reg[17]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[16]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[17]' (FDE) to 'din_top_reg[18]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[17]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[18]' (FDE) to 'din_top_reg[19]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[18]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[19]' (FDE) to 'din_top_reg[20]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[19]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[20]' (FDE) to 'din_top_reg[21]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[20]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[21]' (FDE) to 'din_top_reg[22]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[21]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[22]' (FDE) to 'din_top_reg[23]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[22]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Synth 8-3886] merging instance 'din_top_reg[23]' (FDE) to 'din_top_reg[24]'
+INFO: [Synth 8-3886] merging instance 'my_wots_pkFromSig/din_reg[23]' (LD) to 'my_wots_pkFromSig/wr_en_reg'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\din_top_reg[255] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (wr_en_top_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_wots_pkFromSig/wr_en_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_wots_pkGen/\stupid_count_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (wr_en_reg) is unused and will be removed from module wots_pkFromSig.
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sig_in_reg[255] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\stupid_count_reg[23] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:06 . Memory (MB): peak = 1596.539 ; gain = 866.723
+---------------------------------------------------------------------------------
+ Sort Area is control_system__GCB2 level_i0_0 : 0 0 : 3101 5754 : Used 1 time 0
+ Sort Area is control_system__GCB2 level_i0_0 : 0 1 : 2653 5754 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++-------------------+------------+---------------+----------------+
+|Module Name        | RTL Object | Depth x Width | Implemented As | 
++-------------------+------------+---------------+----------------+
+|sha256_k_constants | tmp_K      | 64x32         | LUT            | 
++-------------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
+-------NONE-------
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|xmss_node   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|xmss_node   | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:13 . Memory (MB): peak = 1750.168 ; gain = 1020.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:25 . Memory (MB): peak = 1907.566 ; gain = 1177.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
+-------NONE-------
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance my_control_systemi_7/my_accelerator/my_control_system/my_wots_pkGen/tmp_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_control_systemi_7/my_accelerator/my_control_system/my_wots_pkGen/tmp_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_control_systemi_7/my_accelerator/my_control_system/my_wots_pkGen/tmp_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_control_systemi_7/my_accelerator/my_control_system/my_wots_pkGen/tmp_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_control_systemi_7/my_accelerator/my_control_system/my_wots_pkGen/tmp_reg_2_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_control_systemi_7/my_accelerator/my_control_system/my_wots_pkGen/tmp_reg_2_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_control_systemi_7/my_accelerator/my_control_system/my_wots_pkGen/tmp_reg_2_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_control_systemi_7/my_accelerator/my_control_system/my_wots_pkGen/tmp_reg_2_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_control_systemi_7/my_accelerator/my_control_system/my_wots_pkFromSig/tmp_array_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_control_systemi_7/my_accelerator/my_control_system/my_wots_pkFromSig/tmp_array_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_control_systemi_7/my_accelerator/my_control_system/my_wots_pkFromSig/tmp_array_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_control_systemi_7/my_accelerator/my_control_system/my_wots_pkFromSig/tmp_array_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_control_systemi_7/my_accelerator/my_control_system/my_wots_pkFromSig/tmp_array_reg_2_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_control_systemi_7/my_accelerator/my_control_system/my_wots_pkFromSig/tmp_array_reg_2_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_control_systemi_7/my_accelerator/my_control_system/my_wots_pkFromSig/tmp_array_reg_2_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_control_systemi_7/my_accelerator/my_control_system/my_wots_pkFromSig/tmp_array_reg_2_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:27 ; elapsed = 00:01:46 . Memory (MB): peak = 1907.566 ; gain = 1177.750
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance my_accelerator/my_control_system/my_wots_pkGen/tmp_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_accelerator/my_control_system/my_wots_pkGen/tmp_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_accelerator/my_control_system/my_wots_pkGen/tmp_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_accelerator/my_control_system/my_wots_pkGen/tmp_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_accelerator/my_control_system/my_wots_pkGen/tmp_reg_2_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_accelerator/my_control_system/my_wots_pkGen/tmp_reg_2_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_accelerator/my_control_system/my_wots_pkGen/tmp_reg_2_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_accelerator/my_control_system/my_wots_pkGen/tmp_reg_2_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_accelerator/my_control_system/my_wots_pkFromSig/tmp_array_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_accelerator/my_control_system/my_wots_pkFromSig/tmp_array_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_accelerator/my_control_system/my_wots_pkFromSig/tmp_array_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_accelerator/my_control_system/my_wots_pkFromSig/tmp_array_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_accelerator/my_control_system/my_wots_pkFromSig/tmp_array_reg_2_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_accelerator/my_control_system/my_wots_pkFromSig/tmp_array_reg_2_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_accelerator/my_control_system/my_wots_pkFromSig/tmp_array_reg_2_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance my_accelerator/my_control_system/my_wots_pkFromSig/tmp_array_reg_2_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:37 ; elapsed = 00:01:56 . Memory (MB): peak = 2039.691 ; gain = 1309.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:37 ; elapsed = 00:01:56 . Memory (MB): peak = 2039.691 ; gain = 1309.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:40 ; elapsed = 00:01:59 . Memory (MB): peak = 2090.859 ; gain = 1361.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:41 ; elapsed = 00:01:59 . Memory (MB): peak = 2090.859 ; gain = 1361.043
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:43 ; elapsed = 00:02:02 . Memory (MB): peak = 2115.746 ; gain = 1385.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:43 ; elapsed = 00:02:02 . Memory (MB): peak = 2115.746 ; gain = 1385.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|xmss_node   | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|xmss_node   | PCIN>>17+A*B | 0      | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+--------------------+----------+
+|      |BlackBox name       |Instances |
++------+--------------------+----------+
+|1     |clk_wiz_0           |         1|
+|2     |sig_fifo            |         1|
+|3     |my_bram_xmss_node_2 |         1|
++------+--------------------+----------+
+
+Report Cell Usage: 
++------+------------------+------+
+|      |Cell              |Count |
++------+------------------+------+
+|1     |clk_wiz           |     1|
+|2     |my_bram_xmss_node |     1|
+|3     |sig_fifo          |     1|
+|4     |CARRY4            |   812|
+|5     |DSP48E1           |     2|
+|7     |LUT1              |   286|
+|8     |LUT2              |  5091|
+|9     |LUT3              |  4216|
+|10    |LUT4              |  2953|
+|11    |LUT5              |  2616|
+|12    |LUT6              |  7129|
+|13    |MUXF7             |   389|
+|14    |MUXF8             |    28|
+|15    |RAMB36E1          |    16|
+|16    |FDCE              | 13088|
+|17    |FDPE              |    13|
+|18    |FDRE              | 13082|
+|19    |FDSE              |     4|
+|20    |IBUF              |     2|
+|21    |OBUF              |     3|
++------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:43 ; elapsed = 00:02:02 . Memory (MB): peak = 2115.746 ; gain = 1385.930
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 214 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:33 ; elapsed = 00:01:58 . Memory (MB): peak = 2115.746 ; gain = 1288.273
+Synthesis Optimization Complete : Time (s): cpu = 00:01:43 ; elapsed = 00:02:03 . Memory (MB): peak = 2115.746 ; gain = 1385.930
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.287 . Memory (MB): peak = 2124.770 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1247 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2133.586 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 107838db
+INFO: [Common 17-83] Releasing license: Synthesis
+267 Infos, 122 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:50 ; elapsed = 00:02:11 . Memory (MB): peak = 2133.586 ; gain = 1610.289
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 2133.586 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/joshe/Documents/XMSS_FIPS_205_UART/xmss_fips_205_UART_vivado_project/xmss_fips_205_UART_vivado_project.runs/synth_1/top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Sep  2 09:11:31 2025...

@@ -1,0 +1,11 @@
+0.7
+2020.2
+May 22 2025
+00:13:55
+C:/Users/joshe/Documents/ECEN 722/Lab4/lab4_code/butterfly.v,1759891440,verilog,,C:/Users/joshe/Documents/ECEN 722/Lab4/lab4_code/fft_freq_pipe.v,,butterfly_freq;butterfly_time,,,../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/joshe/Documents/ECEN 722/Lab4/lab4_code/fft_freq.v,1759891440,verilog,,C:/Users/joshe/Documents/ECEN 722/Lab4/lab4_code/multiply.v,,fft_freq,,,../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/joshe/Documents/ECEN 722/Lab4/lab4_code/fft_freq_pipe.v,1759891440,verilog,,C:/Users/joshe/Documents/ECEN 722/Lab4/lab4_code/multiply.v,,fft_freq_pipe,,,../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/joshe/Documents/ECEN 722/Lab4/lab4_code/fft_freq_pipe_tb.v,1759891440,verilog,,,,fft_freq_pipe_tb,,,../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/joshe/Documents/ECEN 722/Lab4/lab4_code/fft_freq_tb.v,1759891440,verilog,,,,fft_freq_tb,,,../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/joshe/Documents/ECEN 722/Lab4/lab4_code/multiply.v,1759891440,verilog,,C:/Users/joshe/Documents/ECEN 722/Lab4/lab4_code/fft_freq_pipe_tb.v,,multiply,,,../../../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/joshe/Documents/XMSS_FIPS_205_UART/lab4/lab4.sim/sim_1/behav/xsim/glbl.v,1741209010,verilog,,,,glbl,,,,,,,,

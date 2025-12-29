@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_accelerator_ethernet_axi_wrapper_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_accelerator_ethernet_axi_wrapper" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="1,001.000001 us"></ZoomEndTime>
+      <Cursor1Time time="400.400000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="530"></NameColumnWidth>
+      <ValueColumnWidth column_width="505"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="71" />
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/tx_data" type="logic">
+      <obj_property name="ElementShortName">tx_data</obj_property>
+      <obj_property name="ObjectShortName">tx_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/rx_data" type="logic">
+      <obj_property name="ElementShortName">rx_data</obj_property>
+      <obj_property name="ObjectShortName">rx_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/led_r" type="logic">
+      <obj_property name="ElementShortName">led_r</obj_property>
+      <obj_property name="ObjectShortName">led_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/led_g" type="logic">
+      <obj_property name="ElementShortName">led_g</obj_property>
+      <obj_property name="ObjectShortName">led_g</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/clk_period" type="other">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider8">
+      <obj_property name="label">top</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/sw0" type="logic">
+      <obj_property name="ElementShortName">sw0</obj_property>
+      <obj_property name="ObjectShortName">sw0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/uart_rxd" type="logic">
+      <obj_property name="ElementShortName">uart_rxd</obj_property>
+      <obj_property name="ObjectShortName">uart_rxd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/uart_txd" type="logic">
+      <obj_property name="ElementShortName">uart_txd</obj_property>
+      <obj_property name="ObjectShortName">uart_txd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/led0_r" type="logic">
+      <obj_property name="ElementShortName">led0_r</obj_property>
+      <obj_property name="ObjectShortName">led0_r</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/led0_g" type="logic">
+      <obj_property name="ElementShortName">led0_g</obj_property>
+      <obj_property name="ObjectShortName">led0_g</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/CLK50MHZ" type="logic">
+      <obj_property name="ElementShortName">CLK50MHZ</obj_property>
+      <obj_property name="ObjectShortName">CLK50MHZ</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/uart_rx_data" type="array">
+      <obj_property name="ElementShortName">uart_rx_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">uart_rx_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/uart_rx_valid" type="logic">
+      <obj_property name="ElementShortName">uart_rx_valid</obj_property>
+      <obj_property name="ObjectShortName">uart_rx_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/uart_rx_break" type="logic">
+      <obj_property name="ElementShortName">uart_rx_break</obj_property>
+      <obj_property name="ObjectShortName">uart_rx_break</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/uart_rx_en" type="logic">
+      <obj_property name="ElementShortName">uart_rx_en</obj_property>
+      <obj_property name="ObjectShortName">uart_rx_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/uart_tx_busy" type="logic">
+      <obj_property name="ElementShortName">uart_tx_busy</obj_property>
+      <obj_property name="ObjectShortName">uart_tx_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/uart_tx_data" type="array">
+      <obj_property name="ElementShortName">uart_tx_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">uart_tx_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/uart_tx_en" type="logic">
+      <obj_property name="ElementShortName">uart_tx_en</obj_property>
+      <obj_property name="ObjectShortName">uart_tx_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/led_reg" type="array">
+      <obj_property name="ElementShortName">led_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">led_reg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/CLK_HZ" type="other">
+      <obj_property name="ElementShortName">CLK_HZ</obj_property>
+      <obj_property name="ObjectShortName">CLK_HZ</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/BIT_RATE" type="other">
+      <obj_property name="ElementShortName">BIT_RATE</obj_property>
+      <obj_property name="ObjectShortName">BIT_RATE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/PAYLOAD_BITS" type="other">
+      <obj_property name="ElementShortName">PAYLOAD_BITS</obj_property>
+      <obj_property name="ObjectShortName">PAYLOAD_BITS</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider27">
+      <obj_property name="label">acclerator</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/rstn" type="logic">
+      <obj_property name="ElementShortName">rstn</obj_property>
+      <obj_property name="ObjectShortName">rstn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/tx_data" type="array">
+      <obj_property name="ElementShortName">tx_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/tx_valid" type="logic">
+      <obj_property name="ElementShortName">tx_valid</obj_property>
+      <obj_property name="ObjectShortName">tx_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/tx_ready" type="logic">
+      <obj_property name="ElementShortName">tx_ready</obj_property>
+      <obj_property name="ObjectShortName">tx_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/rx_data" type="array">
+      <obj_property name="ElementShortName">rx_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/rx_valid" type="logic">
+      <obj_property name="ElementShortName">rx_valid</obj_property>
+      <obj_property name="ObjectShortName">rx_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/rx_ready" type="logic">
+      <obj_property name="ElementShortName">rx_ready</obj_property>
+      <obj_property name="ObjectShortName">rx_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/op_input" type="array">
+      <obj_property name="ElementShortName">op_input[1:0]</obj_property>
+      <obj_property name="ObjectShortName">op_input[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/node_secret_seed" type="array">
+      <obj_property name="ElementShortName">node_secret_seed[255:0]</obj_property>
+      <obj_property name="ObjectShortName">node_secret_seed[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/message_in" type="array">
+      <obj_property name="ElementShortName">message_in[255:0]</obj_property>
+      <obj_property name="ObjectShortName">message_in[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/node_target_height" type="array">
+      <obj_property name="ElementShortName">node_target_height[15:0]</obj_property>
+      <obj_property name="ObjectShortName">node_target_height[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/node_target_index" type="array">
+      <obj_property name="ElementShortName">node_target_index[15:0]</obj_property>
+      <obj_property name="ObjectShortName">node_target_index[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/sig_in" type="array">
+      <obj_property name="ElementShortName">sig_in[255:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_in[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/node_valid_in" type="logic">
+      <obj_property name="ElementShortName">node_valid_in</obj_property>
+      <obj_property name="ObjectShortName">node_valid_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/op_out" type="array">
+      <obj_property name="ElementShortName">op_out[1:0]</obj_property>
+      <obj_property name="ObjectShortName">op_out[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/pk_out" type="array">
+      <obj_property name="ElementShortName">pk_out[255:0]</obj_property>
+      <obj_property name="ObjectShortName">pk_out[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/pkFromSig_out" type="array">
+      <obj_property name="ElementShortName">pkFromSig_out[255:0]</obj_property>
+      <obj_property name="ObjectShortName">pkFromSig_out[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/sig_xmss_out" type="array">
+      <obj_property name="ElementShortName">sig_xmss_out[255:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_xmss_out[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/node_valid_out" type="logic">
+      <obj_property name="ElementShortName">node_valid_out</obj_property>
+      <obj_property name="ObjectShortName">node_valid_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/node_ready" type="logic">
+      <obj_property name="ElementShortName">node_ready</obj_property>
+      <obj_property name="ObjectShortName">node_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/sig_fifo_din" type="array">
+      <obj_property name="ElementShortName">sig_fifo_din[255:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_fifo_din[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/sig_fifo_wr_en" type="logic">
+      <obj_property name="ElementShortName">sig_fifo_wr_en</obj_property>
+      <obj_property name="ObjectShortName">sig_fifo_wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/sig_fifo_rd_en" type="logic">
+      <obj_property name="ElementShortName">sig_fifo_rd_en</obj_property>
+      <obj_property name="ObjectShortName">sig_fifo_rd_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/sig_fifo_dout" type="array">
+      <obj_property name="ElementShortName">sig_fifo_dout[255:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_fifo_dout[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/sig_fifo_full" type="logic">
+      <obj_property name="ElementShortName">sig_fifo_full</obj_property>
+      <obj_property name="ObjectShortName">sig_fifo_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/sig_fifo_empty" type="logic">
+      <obj_property name="ElementShortName">sig_fifo_empty</obj_property>
+      <obj_property name="ObjectShortName">sig_fifo_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/state" type="other">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/rx_data_reg" type="array">
+      <obj_property name="ElementShortName">rx_data_reg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rx_data_reg[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/din_accelerator" type="array">
+      <obj_property name="ElementShortName">din_accelerator[255:0]</obj_property>
+      <obj_property name="ObjectShortName">din_accelerator[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/wr_en_accelerator" type="logic">
+      <obj_property name="ElementShortName">wr_en_accelerator</obj_property>
+      <obj_property name="ObjectShortName">wr_en_accelerator</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/rd_en_accelerator" type="logic">
+      <obj_property name="ElementShortName">rd_en_accelerator</obj_property>
+      <obj_property name="ObjectShortName">rd_en_accelerator</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/din_global" type="array">
+      <obj_property name="ElementShortName">din_global[255:0]</obj_property>
+      <obj_property name="ObjectShortName">din_global[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/wr_en_global" type="logic">
+      <obj_property name="ElementShortName">wr_en_global</obj_property>
+      <obj_property name="ObjectShortName">wr_en_global</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/rd_en_global" type="logic">
+      <obj_property name="ElementShortName">rd_en_global</obj_property>
+      <obj_property name="ObjectShortName">rd_en_global</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/packet_count" type="other">
+      <obj_property name="ElementShortName">packet_count</obj_property>
+      <obj_property name="ObjectShortName">packet_count</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/sk_reg" type="array">
+      <obj_property name="ElementShortName">sk_reg[255:0]</obj_property>
+      <obj_property name="ObjectShortName">sk_reg[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/target_height_reg" type="array">
+      <obj_property name="ElementShortName">target_height_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">target_height_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/target_index_reg" type="array">
+      <obj_property name="ElementShortName">target_index_reg[15:0]</obj_property>
+      <obj_property name="ObjectShortName">target_index_reg[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/pk_reg" type="array">
+      <obj_property name="ElementShortName">pk_reg[255:0]</obj_property>
+      <obj_property name="ObjectShortName">pk_reg[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/message_reg" type="array">
+      <obj_property name="ElementShortName">message_reg[255:0]</obj_property>
+      <obj_property name="ObjectShortName">message_reg[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/sig_reg" type="array">
+      <obj_property name="ElementShortName">sig_reg[255:0]</obj_property>
+      <obj_property name="ObjectShortName">sig_reg[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_accelerator_ethernet_axi_wrapper/uut/my_accelerator/fifo_count" type="other">
+      <obj_property name="ElementShortName">fifo_count</obj_property>
+      <obj_property name="ObjectShortName">fifo_count</obj_property>
+   </wvobject>
+</wave_config>
