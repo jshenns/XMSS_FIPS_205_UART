@@ -193,32 +193,28 @@ begin
                     end if;
                     
                 when SQUEEZE_OUT =>
-                    if ready = '1' then
-                        squeeze <= '1';
-                    elsif ready = '0' and squeeze = '1' then
-                        -- Waiting for permutation
-                        squeeze <= '0';
-                    end if;
-                    
                     -- After squeeze, keccak ready goes high and we can read 4x64-bit outputs
                     if ready = '1' and squeeze = '0' and absorb_count >= 8 then
                         -- Read first 64 bits
                         digest_o(63 downto 0) <= dout;
                         squeeze <= '1';
                         absorb_count <= 1;
-                    elsif ready = '1' and absorb_count = 1 then
+                    elsif ready = '1' and squeeze = '0' and absorb_count = 1 then
                         digest_o(127 downto 64) <= dout;
                         squeeze <= '1';
                         absorb_count <= 2;
-                    elsif ready = '1' and absorb_count = 2 then
+                    elsif ready = '1' and squeeze = '0' and absorb_count = 2 then
                         digest_o(191 downto 128) <= dout;
                         squeeze <= '1';
                         absorb_count <= 3;
-                    elsif ready = '1' and absorb_count = 3 then
+                    elsif ready = '1' and squeeze = '0' and absorb_count = 3 then
                         digest_o(255 downto 192) <= dout;
                         digest_valid_o <= '1';
                         s_tready_o <= '1';
                         state <= IDLE;
+                    elsif ready = '0' and squeeze = '1' then
+                        -- Waiting for squeeze operation to complete
+                        squeeze <= '0';
                     end if;
                     
                 when others =>
